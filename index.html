@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Guide Management System</title>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="hero">
+            <h1>Tourist Guide Management System</h1>
+            <p>Connecting Tourists with Trusted Guides Around the World</p>
+            <a href="#features" class="btn">Learn More</a>
+        </div>
+    </header>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="features">
+            <p><strong>Real-Time Guide Search:</strong> Find guides by location, language, and expertise.</p>
+            <p><strong>Booking System:</strong> Book guides instantly with secure payment options.</p>
+            <p><strong>Ratings and Feedback:</strong> Read reviews from other tourists to choose the best guide.</p>
+
+        </div>
+    </section>
+
+    <section id="guides">
+        <h2>Our Guides</h2>
+        <div class="features">
+            <p><strong>John Doe:</strong> Expert in historical tours, speaks English and French. <br /><em>Rating: ★★★★☆</em></p>
+            <p><strong>Jane Smith:</strong> Cultural expert, speaks Spanish and English. <br /><em>Rating: ★★★★☆</em></p>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to book a guide? Fill out the form below:</p>
+        <div class="contact">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Tourist Guide Management System | All Rights Reserved</p>
+    </footer>
+
+    <div id="sectionfavplacessection">
+        <div class="favplaces-container">
+            <h1 class="favplaces-heading">Favourite Places</h1>
+            <div class="favplacescard-container d-flex flex-row" onclick="display('sectioncarouselsection')">
+                <div>
+                    <h1 class="favplacescard-heading">Taj Mahal</h1>
+                    <p class="favplacescard-description">If there was just one symbol to represent all of India, it would be the Taj Mahal</p>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-img.png" class="favplacesimage" />
+            </div>
+
+            <div class="favplacescard-container d-flex flex-row" onclick="display('sectiongoldentemple')">
+                <div>
+                    <h1 class="favplacescard-heading">Golden Temple</h1>
+                    <p class="favplacescard-description">Amritsar is world-famous for the beautiful and highly revered Golden Temple</p>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/golden-temple-img.png" class="image" />
+            </div>
+
+            <div class="favplacescard-container d-flex flex-row" onclick="display('sectionmysorepalace')">
+                <div>
+                    <h1 class="favplacescard-heading">Mysore Palace</h1>
+                    <p class="favplacescard-description">The Mysore Palace is a historical palace and the royal residence at Mysore</p>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/mysore-palace-img.png" class="image" />
+            </div>
+
+            <div class="favplacescard-container d-flex flex-row" onclick="display('sectionvaranasitemple')">
+                <div>
+                    <h1 class="favplacescard-heading">Varanasi Temple</h1>
+                    <p class="favplacescard-description">Varanasi Temple is most famous Hindu temples dedicated to Lord Shiva</p>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/varanasi-temple-img.png" class="image" />
+            </div>
+            <button class="btn btn-dark backbutton-1" onclick="display('sectionhome')">Back</button>
+        </div>
+    </div>
+
+
+    <div id="sectioncarouselsection">
+        <div class="detailedview-container">
+            <h1 class="heading">Detailed View</h1>
+            <div class="card-container">
+
+                <div id="carouseIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://img.freepik.com/premium-photo/indian-famous-taj-mahal-generated-by-ai_1074884-2169.jpg?w=996" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://img.freepik.com/premium-photo/cinematic-night-view-taj-mahal_1151123-24855.jpg?w=1060" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://img.freepik.com/premium-photo/fresh-clean-view-taj-mahal-sunrise-agra-uttar-pradesh-india_431724-2639.jpg?w=996" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <h1 class="card-heading">Taj Mahal</h1>
+                <p class="card-description">"Discover the timeless beauty of the Taj Mahal, a UNESCO World Heritage Site and a symbol of eternal love. This stunning white marble mausoleum, built by Emperor Shah Jahan for his beloved wife Mumtaz Mahal, is renowned for its exquisite architecture, intricate carvings, and serene gardens. A masterpiece of Mughal design, the Taj Mahal continues to captivate visitors from around the world with its grace and grandeur."</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-secondary backbutton-1 " onclick="display('sectionfavplacessection')">Back</button>
+                <button class="btn btn-primary gotovideo-button" onclick="display('sectionvideosection')">Video</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="sectiongoldentemple">
+        <div class="detailedview-container">
+            <h1 class="heading">Detailed View</h1>
+            <div class="card-container">
+
+                <div id="goldentemplecarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#goldentemplecarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#goldentemplecarousel" data-slide-to="1"></li>
+                        <li data-target="goldentemplecarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/goldentemple1-img.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/goldentemple2-img.png"" class=" d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/goldentemple1-img.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#goldentemplecarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#goldentemplecarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <h1 class="card-heading">Golden Temple</h1>
+                <p class="card-description">"Immerse yourself in the serene beauty of the Golden Temple, or Harmandir Sahib, the heart of Sikhism. This architectural marvel, adorned with stunning gold and intricate marble, sits gracefully beside its sacred pool, reflecting both its grandeur and tranquility."</p>
+                <ul class="card-description unordered-list ">
+                    <li>jallianwallah bagh</li>
+                    <li>wagah border</li>
+                    <li>bathinda fort</li>
+                    <li>harike wetland</li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-secondary backbutton-1 " onclick="display('sectionfavplacessection')">Back</button>
+                <button class="btn btn-primary gotovideo-button" onclick="display('sectiongoldenvideo')">Video</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="sectionmysorepalace">
+        <div class="detailedview-container">
+            <h1 class="heading">Detailed View</h1>
+            <div class="card-container">
+
+                <div id="mysorepalacecarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mysorepalacecarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mysorepalacecarousel" data-slide-to="1"></li>
+                        <li data-target="mysorepalacecarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://mediaim.expedia.com/destination/9/34469b10ae5e91095fda2aa8c74ddccf.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.britannica.com/27/242227-050-48358A10/Mysore-Palace-Mysuru-Karnataka-India.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://im.whatshot.in/img/2019/May/shutterstock-1081511348-cropped-1-1557137845.jpg?wp=1" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#mysorepalacecarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mysorepalacecarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <h1 class="card-heading">Mysore Palace</h1>
+                <p class="card-description">"Step into the grandeur of Mysore Palace, a majestic marvel in Karnataka, India. This stunning royal residence, with its intricate Indo-Saracenic architecture and opulent interiors, stands as a testament to the rich heritage of the Wodeyar dynasty. Adorned with intricate carvings, vibrant stained glass, and lavish decor, the palace offers a glimpse into regal opulence. Explore its ornate halls, breathtaking courtyards, and the dazzling illumination during festivals, and experience the regal splendor that continues to captivate visitors from around the world.
+                    "</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-secondary backbutton-1 " onclick="display('sectionfavplacessection')">Back</button>
+                <button class="btn btn-primary gotovideo-button" onclick="display('sectionmysorevideo')">Video</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="sectionvaranasitemple">
+        <div class="detailedview-container">
+            <h1 class="heading">Detailed View</h1>
+            <div class="card-container">
+
+                <div id="varanasitemplecarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#varanasitemplecarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#varanasitemplecarousel" data-slide-to="1"></li>
+                        <li data-target="#varanasitemplecarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Kashi_Vishwanath.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ytimg.com/vi/7PJWgUyAapg/maxresdefault.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.deccanherald.com/deccanherald%2Fimport%2Fsites%2Fdh%2Ffiles%2Fgallery_images%2F2021%2F12%2F13%2Ffile7it4fuvwws1fnxt28md.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#varanasitemplecarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#varanasitemplecarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <h1 class="card-heading">Varanasi Temple</h1>
+                <p class="card-description">"Immerse yourself in the spiritual heart of India at Varanasi's ancient temples. Revered as one of the world's oldest cities, Varanasi boasts a tapestry of sacred temples like Kashi Vishwanath, where devotion and history converge."</p>
+                <ol class="card-description ordered-list">
+                    <li>Kashi Vishwanath Temple</li>
+                    <li>Sankat Mochan Hanuman Temple</li>
+                    <li>Durga Temple</li>
+                    <li>Tulsi Manas Temple</li>
+                    <li>Annapurna Temple</li>
+                </ol>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-secondary backbutton-1 " onclick="display('sectionfavplacessection')">Back</button>
+                <button class="btn btn-primary gotovideo-button" onclick="display('sectionvaranasivideo')">Video</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="sectionvideosection">
+        <div class="video-container">
+            <div class="videocard-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/49HTIoCccDY?rel=0" allowfullscreen></iframe>
+                </div>
+
+                <h1 class="videocard-heading">Taj Mahal</h1>
+                <p class="videocard-description">"Watch the video to discover one of the Seven Wonders of the World, a globally recognized marvel. Dive into the rich history and breathtaking beauty of this iconic landmark."</p>
+            </div>
+            <button class="btn btn-dark backbutton-1" onclick="display('sectioncarouselsection')">Back</button>
+            <a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank" class="wiki-link">Wikipedia</a>
+        </div>
+    </div>
+
+
+
+    <div id="sectiongoldenvideo">
+        <div class="video-container">
+            <div class="videocard-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QqUUUYO9uuw" allowfullscreen></iframe>
+                </div>
+
+                <h1 class="videocard-heading">Golden Temple</h1>
+                <p class="videocard-description">"Watch the video to uncover the serene magnificence of the Golden Temple in Amritsar. Experience the spiritual ambiance and stunning architecture of this iconic Sikh shrine."</p>
+            </div>
+            <button class="btn btn-dark backbutton-1" onclick="display('sectiongoldentemple')">Back</button>
+            <a href="https://en.wikipedia.org/wiki/Golden_Temple" target="_blank" class="wiki-link">Wikipedia</a>
+        </div>
+    </div>
+
+
+    <div id="sectionmysorevideo">
+        <div class="video-container">
+            <div class="videocard-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fYfvk25kJiM" allowfullscreen></iframe>
+                </div>
+
+                <h1 class="videocard-heading">Mysore Palace</h1>
+                <p class="videocard-description">"Watch the video to delve into the grandeur of Mysore Palace. Marvel at the opulent design and rich history of this royal residence, a true testament to Indian heritage."</p>
+            </div>
+            <button class="btn btn-dark backbutton-1" onclick="display('sectionmysorepalace')">Back</button>
+            <a href="https://en.wikipedia.org/wiki/Mysore_Palace" target="_blank" class="wiki-link">Wikipedia</a>
+        </div>
+    </div>
+
+
+
+    <div id="sectionvaranasivideo">
+        <div class="video-container">
+            <div class="videocard-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kegsMwaH63E" allowfullscreen></iframe>
+                </div>
+
+                <h1 class="videocard-heading">Varanasi Temple</h1>
+                <p class="videocard-description">"Watch the video to explore the ancient temples of Varanasi, one of India's most spiritual cities. Discover the sacred rituals and timeless beauty of these revered sites."</p>
+            </div>
+            <button class="btn btn-dark backbutton-1" onclick="display('sectionvaranasitemple')">Back</button>
+            <a href="https://en.wikipedia.org/wiki/Kashi_Vishwanath_Temple" target="_blank" class="wiki-link">Wikipedia</a>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
